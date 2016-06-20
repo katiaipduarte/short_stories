@@ -22,7 +22,7 @@
                   <small>Created by: <%= story.user.name %> on <%= story.created_at.strftime('%B %d, %Y at %l:%M %p') %></small>
                </span>
                <br>
-               <span class="text-muted pull-right"><small>Category: <%= story.category.name %></small></span>
+               <span class="text-muted pull-right"><small>Category: <%= story.category.name %> </small></span>
             </div>
          <% end %>
       </div>
@@ -32,7 +32,12 @@
             <div class="panel-heading text-center">Categories</div>
             <ul class="list-group">
                <% Category.all.each do |category| %>
-                  <li class="list-group-item"><%= link_to category.name, category_path(category) %></li>
+                  <li class="list-group-item">
+                     <%= link_to category.name, category_path(category) %>
+                     <span class="badge" style="background-color: #DD4814;">
+                        <%= category.stories.count %> 
+                     </span>
+                  </li>
                <% end %>
             </ul>
          </div>

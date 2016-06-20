@@ -3,6 +3,7 @@ class StoriesController < ApplicationController
 
    def index
       @stories = Story.all.order(id: :desc).page(params[:page]).per(5)
+
    end
 
    def new

@@ -17,4 +17,5 @@ class Story < ActiveRecord::Base
       stories = Story.where("body LIKE ?", "%#{params[:search]}%") if params[:search].present?
       stories
    end
+
 end
