@@ -18,3 +18,47 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootswatch/united/bootswatch";
+
+html {
+   height: 100%;
+
+   body {
+      position: relative;
+      margin: 0;
+      padding-bottom: 6rem;
+      min-height: 100%;
+   }
+
+   .alert-info {
+      background-color: rgba(221, 72, 20, 0.2);
+      border-color: white;
+      color: #DD4814;
+   }
+
+   .badge {
+      background-color: #DD4814;
+   }
+
+   footer {
+      background-color: #772953;
+      border-color: #511c39;
+      height: 60px;
+      clear: both;
+
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 1rem;
+
+      .footer {
+         padding-right: 15px;
+         padding-left: 15px;
+
+         .text-muted {
+            padding-top: 15px;
+            color: white;
+         }
+      }
+   }
+}

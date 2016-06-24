@@ -9,7 +9,22 @@
 <body>
    <%= render "layouts/header" %>
 
-   <%= yield %>
+   <div class="container">
+		<% flash.each do |name, msg| %>
+			<%= content_tag(:div, msg, class: "alert alert-info text-center") %>
+		<% end %>
+   </div>
 
+   <% if user_signed_in? %>
+      <div class="container">
+         <p>
+            <%= link_to "Submit your short story", new_story_path, class:"btn btn-info" %>
+         </p>
+      </div>
+   <% end %>
+   
+	<%= yield %>
+
+   <%= render "layouts/footer" %>
 </body>
 </html>

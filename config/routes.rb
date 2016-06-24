@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
    devise_for :users
-   
+
    resources :stories do
       resources :comments
       member do
@@ -15,5 +15,6 @@ Rails.application.routes.draw do
 
    get '/top_stories', to: 'pages#topstories', as: 'topstories'
    get '/random_stories', to: 'pages#randomstories', as: 'randomstories'
+   get '/my_stories', to: 'pages#mystories', as: 'mystories'
    get 'category/:id', to: 'categories#show', as: 'category'
 end

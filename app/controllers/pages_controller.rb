@@ -7,4 +7,9 @@ class PagesController < ApplicationController
    def randomstories
       @stories = Story.random
    end
+
+   def mystories
+      @stories = Story.where(user_id: current_user)
+      
+   end
 end
